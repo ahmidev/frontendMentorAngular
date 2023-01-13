@@ -1,0 +1,49 @@
+.main {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+
+.content {
+    width: 343px;
+    height: auto;
+    background-color: var(--Blanc);
+    position: absolute;
+    top: 99px;
+    right: 16px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+
+    
+    
+}
+
+
+@media (min-width: 768px) { 
+    .main {
+        min-width: 940px;
+        min-height: 600px;
+        background-color: var(--Blanc);
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 300px auto;
+        grid-template-rows: auto;
+       
+    }
+    
+    .content {
+        width: 100%;
+        height: 500px;
+        position:static;
+        grid-column: 2/3;
+       
+       
+        
+    }
+    
+}
+
+
+

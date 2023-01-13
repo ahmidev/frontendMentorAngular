@@ -1,0 +1,51 @@
+.infoPerso {
+    width: 343px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.infoPerso .title {
+    width: 295px;
+    height: 87px;
+    margin:30px auto 0;
+}
+
+.infoPerso .title h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Bleu-marine);
+}
+.infoPerso .title p {
+    font-size: 16px;
+    color: var(--Gris-froid);
+    margin: 5px 0;
+}
+
+.infoPerso form {
+    width: 295px;
+    height: 203px;
+    margin: auto;
+}
+.infoPerso form div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+ }
+
+ .infoPerso form div input {
+    width: 295px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--Gris-froid);
+    color: var(--Gris-clair) ;
+    padding: 10px;
+ }
+
+ .infoPerso form div label {
+    color: var(--Bleu-marine);
+    font-size: 12px;
+    margin-bottom: 5px;
+ }

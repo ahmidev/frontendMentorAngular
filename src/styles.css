@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    --main-bg-color: brown;
+    --Bleu-marine : hsl(213, 96%, 18%);
+    --Bleu-violace : hsl(243, 100%, 62%);
+    --Bleu-pastel : hsl(228, 100%, 84%);
+    --Bleu-clair : hsl(206, 94%, 87%);
+    --Rouge-fraise : hsl(354, 84%, 57%);
+    --Gris-froid : hsl(231, 11%, 63%);
+    --Gris-clair : hsl(229, 24%, 87%);
+    --Magnolia : hsl(218, 100%, 97%);
+    --Albâtre : hsl(231, 100%, 99%);
+    --Blanc : hsl(0, 0%, 100%);
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--Magnolia);
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+}
+
+ @media (min-width: 768px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ } 
+
+  
