@@ -28,6 +28,10 @@
     box-sizing: border-box;
     
 }
+.container .card.active {
+    border: 1px solid var(--Bleu-marine);
+    background: var( --Gris-clair);
+}
 
 .container .card label{
     display: flex;
@@ -49,6 +53,36 @@
     height: 20px;
     border-radius: 3px;
 }
+.footer {
+   
+    width: 343px;
+     background-color: var(--Albâtre);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     bottom: 0;
+     
+     
+ }
+ 
+ .footer button {
+     width: 97px;
+     height: 40px;
+     background-color: var(--Bleu-marine);
+     border-radius: 5px;
+     border: none;
+     color: white;
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 14px;
+     font-weight: 500;
+     margin: 0 18px;
+     
+ }
+ .footer .goback {
+    color: var(--Gris-froid);
+    background: transparent;
+ }
 
 @media (min-width: 768px) {
     .container {
@@ -66,5 +100,11 @@
     .container .card .label3 {
         margin-right: 25px;
     }
-    
+    .footer {
+        width: 450px;
+        position: absolute;
+        bottom: 90px;
+             
+               
+     }
 }

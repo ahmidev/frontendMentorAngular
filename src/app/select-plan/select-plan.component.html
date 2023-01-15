@@ -4,40 +4,52 @@
     <div class="cards">
 
    
-    <div class="card">
+    <div class="card" [ngClass]="{'active': arcade}" (click)="selectArcade()">
         <img src="assets/icon-arcade.svg" alt="">
         <div>
             <p class="titlePlan">Arcade</p>
-            <p>$9/mo</p>
-            <p>month</p>
+            <p *ngIf="!test">${{arcadePrinceMonth}}/mo</p>
+            <p *ngIf="test">${{arcadePrinceYearl}}/yr</p>
+            <p class="free" *ngIf="test">2 months free</p>
+           
         </div>
     </div>
-    <div class="card">
+    <div class="card" [ngClass]="{'active': advanced}" (click)="selectAdvanced()">
         <img src="assets/icon-advanced.svg" alt="">
         
         <div>
-            <p class="titlePlan">Pro </p>
-            <p>$12/mo</p>
-            <p>month</p>
+            <p class="titlePlan">Advanced </p>
+            <p *ngIf="!test">${{advancedPrinceMonth}}/mo</p>
+            <p *ngIf="test">${{advancedPrinceYearl}}/yr</p>
+            <p class="free" *ngIf="test">2 months free</p>
+            
         </div>
     </div>
-    <div class="card">
+    <div class="card" [ngClass]="{'active': pro}" (click)="selectPro()">
         <img src="assets/icon-pro.svg" alt="">
         <div>
-            <p class="titlePlan">Arcade</p>
-            <p>$15/mo</p>
-            <p>month</p>
+            <p class="titlePlan">Pro</p>
+            <p *ngIf="!test">${{proPrinceMonth}}/mo</p>
+            <p *ngIf="test">${{proPrinceYearl}}/yr</p>
+            <p class="free" *ngIf="test">2 months free</p>
+            
         </div>
     </div>
 </div>
     <div class="chek">
-        <p>Monthly</p>
-        <input type="checkbox" id="scales" name="scales" >
-        <label for="scales"></label>
-        <p>Yearly</p>
-        
+        <form  >
+            <p [ngClass]="{'selecPlan': !test}" class="">Monthly</p>
+            <input type="checkbox" id="scales" name="scales"  [(ngModel)]="test" >
+            <label for="scales"></label>
+            <p [ngClass]="{'selecPlan': test}">Yearly</p>
+            
+          
+        </form>
     </div>
   
-
+    <div class="footer">
+        <button (click)="goBack()" class="goback">Go Back</button>
+        <button [disabled]="!buttonDisabled" (click)="nextStep()" >Next Step</button>
+    </div>
    
 </div>

@@ -3,33 +3,50 @@
     <p class="paraTitle">Double-check everything looks OK before confirming.</p>
     <div class="card">
         
-        <div>
-            <p>Arcade (Monthly) <a href="">Change</a></p>
-            <p>$9/mo</p>
+        <div >
+            <p *ngIf="plan.title || plan.planType">{{plan.title}} ({{planType }}) <a  class="change" (click)="change()">{{lien}}</a></p>
+           
+            <p *ngIf="!plan.plan && plan.title=='Arcade'">$9/mo</p>
+            <p *ngIf="plan.plan && plan.title=='Arcade'">$90/yr</p>
+            <p *ngIf="!plan.plan && plan.title=='Advanced'">$12/mo</p>
+            <p *ngIf="plan.plan && plan.title=='Advanced'">$120/yr</p>
+            <p *ngIf="!plan.plan && plan.title=='Pro'">$15/mo</p>
+            <p *ngIf="plan.plan && plan.title=='Pro'">$150/yr</p>
             
         </div>
     
-   
-       
+    
         
-        <div>
-            <p>Online srvice</p>
-            <p>$12/mo</p>
+        <div *ngIf="plan.titleAddon1">
+            <p>{{plan.titleAddon1}}</p>
+            <p *ngIf="!plan.plan">+$1/mo</p>
+            <p *ngIf="plan.plan">+$10/yr</p>
            
         </div>
-        <div>
-            <p>Larger storage</p>
-            <p>$15/mo</p>
+        <div *ngIf="plan.titleAddon2">
+            <p>{{plan.titleAddon2}}</p>
+            <p *ngIf="!plan.plan">+$2/mo</p>
+            <p *ngIf="plan.plan">+$20/yr</p>
+           
+        </div>
+        <div *ngIf="plan.titleAddon3">
+            <p>{{plan.titleAddon3}}</p>
+            <p *ngIf="!plan.plan">+$2/mo</p>
+            <p *ngIf="plan.plan">+$20/yr</p>
            
         </div>
     </div>
     <div class="cardTotal">
        <p>Total (per month)</p>
-       <p>+$12/mo</p>
+       <p *ngIf="!plan.plan">+${{plan.prince }}/mo</p>
+       <p *ngIf="plan.plan">+${{plan.prince }}/yr</p>
        
     </div>
    
-  
+    <div class="footer">
+        <button (click)="goBack()" class="goback">Go Back</button>
+        <button (click)="nextStep()">Next Step</button>
+    </div>
 
    
 </div>

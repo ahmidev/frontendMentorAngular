@@ -1,0 +1,15 @@
+h2 {
+    color: red;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 0 20px;
+}
+p {
+    margin: 10px 0;
+    color: var(--Gris-froid);
+}
+span {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--Bleu-marine);
+}

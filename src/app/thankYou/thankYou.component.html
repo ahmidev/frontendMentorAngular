@@ -1,0 +1,9 @@
+<h2>Tank you !</h2>
+<p>Nom : <span>{{ name}}</span></p>
+<p>Email : <span>{{ email}}</span></p>
+<p>Votre numero de éléphone : <span>{{ phone}}</span> </p>
+<p>Vous avez choisi le plan suivant : <span>{{ plan.title}}</span></p>
+<p *ngIf="plan.plan">pour le prix : <span>${{ plan.prince}}/yr</span> </p>
+<p *ngIf="!plan.plan">pour le prix : <span>${{ plan.prince}}/mo</span></p>
+<!-- <p>{{ phone}}</p>
+<p>{{ phone}}</p> -->

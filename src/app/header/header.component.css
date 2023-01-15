@@ -23,6 +23,10 @@
     border: 1px solid white;
     color: white;
 }
+.nav-mobile button.active {
+    background: var(--Blanc);
+    color: var(--Bleu-marine);
+}
 
 @media (min-width: 768px) {
     .nav-mobile {
@@ -58,6 +62,10 @@
         background: transparent;
         border: 1px solid white;
         color: white;
+    }
+    .nav-descktop ul li button.active {
+        background: var(--Blanc);
+        color: var(--Bleu-marine);
     }
     .nav-descktop ul li p {
         display: flex;

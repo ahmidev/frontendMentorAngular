@@ -20,12 +20,23 @@
 .container .card {
     width: 295px;
     height: 77px;
-    border: 1px solid var(--Gris-froid);
+    border: 1px solid var(--Gris-clair);
     border-radius: 5px;
     margin: 10px 0;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
 }
+.container .card:hover {
+    border: 1px solid var(--Gris-froid);
+    background: var( --Gris-clair);
+}
+.container .card.active {
+    border: 1px solid var(--Bleu-marine);
+    background: var( --Gris-clair);
+}
+
  .container .card img {
     width: 40px;
     height: 40px;
@@ -39,7 +50,10 @@
     color: var(--Gris-froid);
     margin-bottom: 5px;
  }
-
+.container .card .free {
+    color: var(--Bleu-marine);
+    font-weight: 500;
+}
  .container .card .titlePlan {
     font-size: 16px;
     font-weight: 500;
@@ -54,6 +68,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+ }
+ .container .chek form {
+    display: flex;
+ }
+ .container .chek form .selecPlan{
+    font-weight: 900;
+    font-size: 17px;
  }
 
  .container .chek label {
@@ -97,7 +118,42 @@
 .chek p {
     margin: 0 15px;
 }
-
+.footer {
+   
+    width: 343px;
+     background-color: var(--Albâtre);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     bottom: 0;
+     
+     
+ }
+ 
+ .footer button {
+     width: 97px;
+     height: 40px;
+     background-color: var(--Bleu-marine);
+     border-radius: 5px;
+     border: none;
+     color: white;
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 14px;
+     font-weight: 500;
+     margin: 0 18px;
+     
+ }
+ .footer button:disabled {
+    background: var(--Gris-froid);
+    cursor: not-allowed;
+}
+ .footer .goback {
+    color: var(--Gris-froid);
+    background: transparent;
+ }
+ 
+ 
 @media (min-width: 768px) {
     .container {
         width: 450px;
@@ -121,5 +177,15 @@
         height: 48px;
         margin-top: 30px;
     }
-
+    .footer {
+        width: 450px;
+        position: absolute;
+        bottom: 90px;
+       
+         
+        
+       
+ 
+        
+     }
 }

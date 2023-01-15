@@ -1,28 +1,34 @@
 <div class="container">
     <h2>Pick add-ons</h2>
     <p class="paraTitle">Add-ons help enhance your gaming experience.</p>
-    <div class="card">
+    <div class="card" [ngClass]="{'active': checkOnlineService}" (click)="selectAddons()">
        
-        <input type="checkbox" id="scales" name="scales" checked>
-        <label for="scales">Online service <span>Access to multiplayer games</span></label>
-        <p>+$10/mo</p>
+        <input type="checkbox" id="scales1" name="scales" [(ngModel)]="checkOnlineService">
+        <label for="scales1">Online service <span>Access to multiplayer games</span></label>
+        <p *ngIf="plan">+$10/yr</p>
+        <p *ngIf="!plan">+$1/mo</p>
     </div>
-    <div class="card">
+    <div class="card" [ngClass]="{'active': checkLargerStorage}" (click)="selectAddons()">
         
-        <input type="checkbox" id="scales" name="scales" checked>
-        <label class="label3" for="scales">Larger storage <span>Extra 1TB of cloud save</span></label>
-        <p>+$10/mo</p>
+        <input type="checkbox" id="scales2" name="scales" [(ngModel)]="checkLargerStorage">
+        <label class="label3" for="scales2">Larger storage <span>Extra 1TB of cloud save</span></label>
+        <p *ngIf="plan">+$20/yr</p>
+        <p *ngIf="!plan">+$2/mo</p>
     </div>
-    <div class="card">
+    <div class="card" [ngClass]="{'active': checkCustomizableProfile}" (click)="selectAddons()">
         <div>
             
         </div>
-        <input type="checkbox" id="scales" name="scales" >
-        <label  for="scales">Customizable profile <span>Custom theme on your profile</span></label>
-        <p>+$10/mo</p>
+        <input type="checkbox" id="scales3" name="scales" [(ngModel)]="checkCustomizableProfile">
+        <label  for="scales3">Customizable profile <span>Custom theme on your profile</span></label>
+        <p *ngIf="plan">+$20/yr</p>
+        <p *ngIf="!plan">+$2/mo</p>
     </div>
    
-  
+    <div class="footer">
+        <button (click)="goBack()" class="goback">Go Back</button>
+        <button (click)="nextStep()" >Next Step</button>
+    </div>
 
    
 </div>

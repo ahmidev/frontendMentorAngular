@@ -3,19 +3,36 @@
         <h2>Personnal info</h2>
         <p>Please provide your name, email adress, and phone number</p>
     </div>
-    
-    <form >
+
+    <form (ngSubmit)="submit()" [formGroup]="form">
         <div>
             <label for="name">Name :</label>
-            <input type="text" id="name" placeholder="e.g. Stephen King">
+            <input formControlName="name" type="text" id="name" placeholder="e.g. Stephen King" />
+
+            <p class="errors" *ngIf="form.get('name')?.errors && form.get('name')?.touched">
+                le nom est requis
+            </p>
         </div>
         <div>
             <label for="mail">Email Adress&nbsp;:</label>
-            <input type="email" id="mail" placeholder="e.g. Stephenking@lorem.com">
+            <input formControlName="email" type="email" id="mail" placeholder="e.g. Stephenking@lorem.com" />
+            <p class="errors" *ngIf="form.get('email')?.errors && form.get('email')?.touched">
+                le mail est requis
+            </p>
         </div>
         <div>
             <label for="phone">Phone Number :</label>
-            <input type="number" id="phone" placeholder="e.g. +330125645" >
+            <input formControlName="phone" type="number" id="phone" placeholder="e.g. +330125645" />
+            <p class="errors" *ngIf="form.get('phone')?.errors && form.get('phone')?.touched">
+                le numéro de téléphone est requis
+            </p>
+        </div>
+        <div class="footer">
+            <!-- <button [style.visibility]="'hidden'" >Go Back</button> -->
+
+            <button [disabled]="form.invalid" type="submit">Next Step</button>
+            <!-- <p>{{form.value | json}}</p>
+        <p>{{form.status}}</p> -->
         </div>
     </form>
 </div>

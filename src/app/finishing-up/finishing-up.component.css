@@ -56,6 +56,42 @@
     color: var(--Bleu-violace);
 }
 
+.footer {
+   
+    width: 343px;
+     background-color: var(--Albâtre);
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: fixed;
+     bottom: 0;
+     
+     
+ }
+ 
+ .footer button {
+     width: 97px;
+     height: 40px;
+     background-color: var(--Bleu-marine);
+     border-radius: 5px;
+     border: none;
+     color: white;
+     font-family: 'Ubuntu', sans-serif;
+     font-size: 14px;
+     font-weight: 500;
+     margin: 0 18px;
+     
+ }
+ .footer .goback {
+    color: var(--Gris-froid);
+    background: transparent;
+ }
+
+ .change {
+    cursor: pointer;
+    color: var(--Bleu-violace);
+ }
+
 @media (min-width: 768px) {
     .container {
         width: 450px;
@@ -68,5 +104,12 @@
     }
     .container .cardTotal {
         padding: 20px;
+    }
+
+.footer {
+   width: 450px;
+    position: absolute;
+   bottom: 90px;
+   
     }
 }
